@@ -17,6 +17,11 @@
 
 <h3>[2]この後, どうしたものか･･･<h3>
 <p>
+・赤矢印：A⇒Bとなる, という定理(Theorem)<br>
+・青矢印：Aがある構造を持つ場合, Bと呼ぶという定義(Definitio)<br>
+・緑矢印：Aがある性質を満たす場合, Bと呼ぶという定義(Definition)。反例つき<br>
+<br>
+まずは定義の <a href="https://boyoyon.github.io/Diagram_of_Abstract_Algebra/blue_arrows.html">青矢印</a> から。
 </p>
     </body>
 </html>
