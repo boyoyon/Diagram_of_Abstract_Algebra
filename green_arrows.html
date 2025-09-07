@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <meta charset="utf-8" />
+        <title>green arrows</title>
+        <style type="text/css">
+            p
+            {
+                padding-left: 2em;
+            }
+            .margin-large
+            {
+                margin-left: 30px;
+            }
+            .margin-large-blue
+            {
+                margin-left: 30px;
+                color: blue;
+            }
+           .margin-abstract {
+               margin-left: 60px; /* 左マージンを広くする */
+               margin-right: 60px; /* 右マージンを広くする */
+           }
+        </style>
+    <style>
+        .two-columns {
+            display: flex;
+            flex-direction: row;
+            gap: 20px; /* 列間のスペース */
+        }
+        .column {
+            flex: 1; /* 各列が均等に幅を取る */
+        }
+    </style>
+<style>
+.three-columns {
+  display: flex;
+  gap: 10px; /* 列間の余白を設定 */
+}
+.column {
+  flex: 1; /* 各列の幅を均等にする */
+  padding: 10px; /* 内側の余白を設定 */
+}
+</style>
+    <style>
+        .styleRef { 
+            text-indent: -40px; /* 最初の行の字下げを逆方向に */
+            margin-left: 10px; /* 2行目以降の字下げを調整 */
+            ul {
+                  list-style-type: none; /* 箇条書き記号を非表示 */
+                  padding-left: 40px; /* 全体の左余白 */
+            }
+            li {
+            }
+        }
+    </style>
+    <style>
+        .styleBullet { 
+            text-indent: -20px; /* 最初の行の字下げを逆方向に */
+            margin-left: 30px; /* 2行目以降の字下げを調整 */
+            ul {
+                  list-style-type: none; /* 箇条書き記号を非表示 */
+                  padding-left: 0px; /* 全体の左余白 */
+            }
+            li {
+            }
+        }
+    </style>
+    <style>
+            ol
+            {
+                margin-left: 30px;
+            }
+            ul
+            {
+                margin-left: 30px;
+            }
+    </style>
+    <style>
+        .thin-line {
+            margin: 0; 
+            margin-left:2em;
+            border: 0;
+            height: 1px;
+            background-color: gray;
+        }
+
+        .thick-line {
+            margin: 0; 
+            margin-left:2em;
+            border: 0;
+            height: 2px;
+            background-color: black;
+        }
+    </style>
+    <style>
+        .blue {
+            color: blue; /* 好きな色に変更してください */
+        }
+    </style>
+    </head>
+    <body>
+        <h1><center><span style="color:#00BF00;">緑矢印(→)</span><br></center></h1>
+<h3>●測度空間 <span style="color:#00BF00;">➡</span> 確率空間</h3>
+<center><img src="images/probability_space.svg"></center>
+<p>
+測度空間とは, 以下の3要素からなる組 \((X,F,μ)\) のこと。
+
+\[
+\begin{array}{l|l}
+\textbf{要素} & \textbf{説明} \\
+\hline
+X & 集合 \\
+\hline
+F & X上のσ-加法族(σ-代数)※ \\
+& ・空集合を含む \\
+& ・補集合に閉じている \\
+& ・可算個の集合の合併に閉じている \\
+\hline
+μ & F上の関数で, \textbf{測度(measure)} と呼ばれる \\
+& ・μ:F→[0,∞)\\
+& ・\textbf{非負性}:μ\geq 0 \\
+& ・\textbf{空集合の測度}:μ(\varnothing)=0 \\
+& ・\textbf{可算加法性}:互いに素な集合列\{A_n\}に対してμ\left(\bigcup_{n=1}^\infty A_n\right)=\sum_{n=1}^\infty μ(A_n)
+\end{array}
+\]
+
+<strong>全体集合 \(X\) の測度 \(μ(X)\) が 1 になる</strong> という性質を満たす場合, その測度空間を <strong>確率空間</strong> という。
+</p>
+<br>
+<h3>●位相空間 <span style="color:#00BF00;">➡</span> ハウスドルフ空間</h3>
+<center><img src="images/hausdorff.svg"></center>
+<p>
+以下の位相 \(O\) と集合の組 \((X,O)\) を位相空間という。
+
+\[
+\begin{array}{l|l|l}
+1 & 空集合と全体集合が含まれる & \varnothing \in O,\quad X \in O　\\
+\hline
+2 & 有限個の交差に対して閉じている & O_1,O2,\cdots,O_n \in O \Rightarrow \bigcap_{k=1}^n O_k \in O \\
+\hline
+3 & 任意個の和集合に対して閉じている & \{O_λ\}_{λ\in A}\subset O\Rightarrow \bigcup_{λ\in A} O_λ \in O
+\end{array}
+\]
+
+位相空間 \((X,O)\) において<br>
+・任意の異なる 2 点 \(x,y \in X\) に対して<br>
+・\(x\) を含む開集合 \(U\), \(y\) を含む開集合 \(V\) が存在し<br>
+・それらが交わらない \((U \cap V=\varnothing)\) <br>
+という性質を満たす場合, <strong>ハウスドルフ空間</strong> という。<br>
+この性質を <strong>ハウスドルフ性</strong> という。<br>
+</p>
+<p>
+ハウスドルフ性は分離公理の一つ。分離公理には以下のようなものがある。
+
+\[
+\begin{array}{l|l|l}
+\textbf{記号} & \textbf{名称} & \textbf{内容} \\
+\hline
+T_0 & コルモゴロフ空間 & 異なる点が少なくとも一方の開集合で分離される。\\
+\hline
+T_1 & フレッシェ空間 & 異なる点がそれぞれの開集合で分離される(片方ずつ) \\
+\hline
+T_2 & ハウスドルフ空間 & 異なる点が互いに交わらない開集合で分離される
+\end{array}
+\]
+
+※後で出てくる バナッハ空間は完備なノルム空間<br>
+　フレッシェ空間は, 半ノルム族で完備 らしい(by Copilot)
+</p>
+<br>
+<h3>●ノルム付きベクトル空間 <span style="color:#00BF00;">➡</span> バナッハ空間<br>　内積空間(エルミート空間) <span style="color:#00BF00;">➡</span> ヒルベルト空間</h3>
+<center><img src="images/banach_hilbert.svg"></center>
+<p>
+赤矢印より, <br>
+・ノルム空間 <span style="color:red;">➡</span> 距離空間<br>
+・内積空間 <span style="color:red;">➡</span> 距離空間<br>
+　　　↓<br>
+距離が小さくなっていく点列(=基本列(コーシー列ともいう))を考えることができる。<br>
+　　　↓<br>
+基本列の極限が集合内の点に収束することは保証されていない。<br>
+　　　↓<br>
+完備化定理により, (基本列の極限が空間内に存在する)完備な空間に拡張できる。<br>
+　　　↓<br>
+・ノルム付きベクトル空間 <span style="color:#00BF00;">➡(完備化)➡</span> バナッハ空間<br>
+・内積空間(エルミート空間) <span style="color:#00BF00;">➡(完備化)➡</span> ヒルベルト空間
+</p>
+<br>
+<h3>●マグマ <span style="color:#00BF00;">➡･･･➡</span> アーベル群(可換群)</h3>
+<center><img src="images/magma_abel.svg"></center>
+<p>
+\[
+\begin{array}{l|l}
+\textbf{代数的構造} & \textbf{説明} \\
+\hline
+マグマ & 空でない集合 M に対して二項演算・:M \times M → M が定義されているとき、\\
+& 組 (M,・）をマグマという \\
+\hline
+半群 & マグマ (S,・) が 結合律 を満たすとき, 半群という \\
+\hline
+モノイド & 半群 (S,・) に 単位元　e \in S　が存在し, 任意の　a \in S　に対して \\
+& e・a=a・e=a \\
+& を満たすとき, モノイドという。\\
+\hline
+群 & モノイド　(G,・)　におうて, 任意の元　a \in G　に対して逆元　a^{-1} \in G　が存在し \\
+& a・a^{-1}=a^{-1}・a=e \\
+& を満たすとき, 群という。\\
+\hline
+アーベル群 & 群　(G,・)　が交換律を満たすとき, アーベル群という。任意の　a,b \in G　に対して\\
+& a・b=b・a
+\end{array}
+\]
+
+</p>
+<br>
+<h3>●環 <span style="color:#00BF00;">➡･･･➡</span> 体</h3>
+<center><img src="images/ring_field.svg"></center>
+<p>
+\[
+\begin{array}{l|l}
+\textbf{代数的構造} & \textbf{説明} \\
+\hline
+環 & 集合 R に加法 + と乗法 ・ の2つの演算が定義され \\
+& ・(R,+) はアーベル群 ･･･ 交換可能な加法 \\
+& ・(R,・) は半群 ･･･ 結合律を満たす \\
+& ・乗法は加法に対して分配律を満たす: a・(b+c)=a・b+a・c \\
+& を満たすもの \\
+\hline
+可換環 & 環 R の乗法が交換可能 (a・b=b・a) を満たすもの \\
+\hline
+整域 & 可換環で, 零因子(*)が存在しないもの \\
+& *零因子とは a\neq 0, b\neq 0 なのに ab=0 となるような a,b \\
+\hline
+一意分解整域 & 整域で, 任意の元が規約元の積に一意に分解できるもの。\\
+\hline
+主理想整域 & 整域で, すべてのイデアルが主イデアルであるもの。\\
+& ・イデアル:　 1. 加法に関して閉じている \\
+&　　　　　　 　2. 環の任意の元との積に関して閉じている \\
+& ・主イデアル: 1つの元だけで生成されるイデアル \\
+\hline
+ユークリッド整域 & 整域で, ユークリッド関数 f:R\setminus\{0\}→N が存在し, 任意の a,b \neq 0 に対して \\
+& b=qa+r かつ f(r) \lt f(a) \\
+& を満たすような q,r \in R が存在する。\\
+\hline
+体 & 可換環で, 0 でないすべての弦が逆元を持つもの。\\
+& ・乗法に関して群になる。\\
+& ・零因子なし, 除法可能。
+
+\end{array}
+\]
+</p>
+    </body>
+</html>
