@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <meta charset="utf-8" />
+        <title>blue arrows</title>
+        <style type="text/css">
+            p
+            {
+                padding-left: 2em;
+            }
+            .margin-large
+            {
+                margin-left: 30px;
+            }
+            .margin-large-blue
+            {
+                margin-left: 30px;
+                color: blue;
+            }
+           .margin-abstract {
+               margin-left: 60px; /* 左マージンを広くする */
+               margin-right: 60px; /* 右マージンを広くする */
+           }
+        </style>
+    <style>
+        .two-columns {
+            display: flex;
+            flex-direction: row;
+            gap: 20px; /* 列間のスペース */
+        }
+        .column {
+            flex: 1; /* 各列が均等に幅を取る */
+        }
+    </style>
+<style>
+.three-columns {
+  display: flex;
+  gap: 10px; /* 列間の余白を設定 */
+}
+.column {
+  flex: 1; /* 各列の幅を均等にする */
+  padding: 10px; /* 内側の余白を設定 */
+}
+</style>
+    <style>
+        .styleRef { 
+            text-indent: -40px; /* 最初の行の字下げを逆方向に */
+            margin-left: 10px; /* 2行目以降の字下げを調整 */
+            ul {
+                  list-style-type: none; /* 箇条書き記号を非表示 */
+                  padding-left: 40px; /* 全体の左余白 */
+            }
+            li {
+            }
+        }
+    </style>
+    <style>
+        .styleBullet { 
+            text-indent: -20px; /* 最初の行の字下げを逆方向に */
+            margin-left: 30px; /* 2行目以降の字下げを調整 */
+            ul {
+                  list-style-type: none; /* 箇条書き記号を非表示 */
+                  padding-left: 0px; /* 全体の左余白 */
+            }
+            li {
+            }
+        }
+    </style>
+    <style>
+            ol
+            {
+                margin-left: 30px;
+            }
+            ul
+            {
+                margin-left: 30px;
+            }
+    </style>
+    <style>
+        .thin-line {
+            margin: 0; 
+            margin-left:2em;
+            border: 0;
+            height: 1px;
+            background-color: gray;
+        }
+
+        .thick-line {
+            margin: 0; 
+            margin-left:2em;
+            border: 0;
+            height: 2px;
+            background-color: black;
+        }
+    </style>
+    <style>
+        .blue {
+            color: blue; /* 好きな色に変更してください */
+        }
+    </style>
+    </head>
+    <body>
+        <h1><center><span style="color:blue;">青矢印(→)</span><br></center></h1>
+<h3>●集合(set) + ある構造 = 空間(space)</h3>
+<center><img src="images/space.svg"></center>
+<p>
+<strong>集合</strong> に何らかの数学的構造を加味したものを <strong>空間</strong> という。<br>
+空間の要素を <strong>点</strong> という。
+</p>
+<br>
+<h3>●測度空間(measure space)</h3>
+<center><img src="images/measure_space.svg"></center>
+<p>
+測度空間とは, 以下の3要素からなる組 \((X,F,μ)\) のこと。
+
+\[
+\begin{array}{l|l}
+\textbf{要素} & \textbf{説明} \\
+\hline
+X & 集合 \\
+\hline
+F & X上のσ-加法族(σ-代数)※ \\
+& ・空集合を含む \\
+& ・補集合に閉じている \\
+& ・可算個の集合の合併に閉じている \\
+\hline
+μ & F上の関数で, \textbf{測度(measure)} と呼ばれる \\
+& ・μ:F→[0,∞)\\
+& ・\textbf{非負性}:μ\geq 0 \\
+& ・\textbf{空集合の測度}:μ(\varnothing)=0 \\
+& ・\textbf{可算加法性}:互いに素な集合列\{A_n\}に対してμ\left(\bigcup_{n=1}^\infty A_n\right)=\sum_{n=1}^\infty μ(A_n)
+\end{array}
+\]
+
+※ 加法族
+
+\[
+\begin{array}{l|l}
+概念 & 説明 \\
+\hline
+集合族 & ある集合の部分集合からなる集合。制約なし \\
+\hline
+加法族 & 集合族の中でも, 特定の演算に閉じているもの \\
+\hline
+σ加法族 & 加法族の中でも, 可算和・補集合に関して閉じているもの。測度論, 確率論の基礎になる
+\end{array}
+\]
+
+</p>
+<br>
+<h3>●位相空間(topological space)</h3>
+<center><img src="images/topological_space.svg"></center>
+<p>
+以下の位相 \(O\) と集合の組 \((X,O)\) を位相空間という。
+
+<div class="styleBullet">
+<ul><li>
+<strong>1. 空集合と全体集合が含まれる</strong><br>
+<br>
+　\(\varnothing \in O,\quad X \in O\)
+
+</li><br><li>
+<strong>2. 有限個の交差に対して閉じている</strong><br>
+<br>
+　\(O_1,O_2.\cdots,O_n \in O \Rightarrow \bigcap_{k=1}^n O_k \in O\)
+
+</li><br><li>
+<strong>3. 任意個の和集合に対して閉じている</strong><br>
+<br>
+　\(\{O_λ\}_{λ\in A}\subset O \Rightarrow \bigcup_{λ\in A}O_λ\in O\)
+</li></ul></div>
+</p>
+<br>
+<h3>●距離空間(metric space)</h3>
+<center><img src="images/metric_space.svg"></center>
+<p>
+ある空でない集合 \(X\) に対して, 関数
+
+\[
+d:X \times X \rightarrow [0,\infty)
+\]
+
+が以下の条件をすべて満たすとき, 組 \((X,d)\) を<strong>距離関数</strong> と呼ぶ。<br>
+
+<div class="styleBullet">
+<ul><li>
+<strong>1. 非負性(Non-negativity)</strong><br>
+　すべての \(x,y\in X\) に対して距離は 0 以上。<br>
+<br>
+　\(d(x,y) \geq 0\)
+
+</li><br><li>
+<strong>2. 自己同一性(Identity of indiscernibles)</strong><br>
+　距離が 0 であるのは 2 点が同一のときのみ。<br>
+<br>
+　\(d(x,y)=0 \Leftrightarrow x=y\)
+
+</li><br><li>
+<strong>3. 対称性(Symmetry)</strong><br>
+　点 \(x\) から \(y\) への距離は, \(y\) から \(x\) への距離と同じ。<br>
+<br>
+　\(d(x,y)=d(y,x)\)
+
+</li><br><li>
+<strong>4. 三角不等式(Triangle inequality)</strong><br>
+　直接の距離は, 経由する距離より短いか等しい。<br>
+<br>
+　\(d(x,z) \leq d(x,y)+d(y,z)\)
+
+</li></ul></div>
+</p>
+<br>
+<h3>●ベクトル空間(vector space)</h3>
+<center><img src="images/vector_space.svg"></center>
+<p>
+集合 \(V\) が体 \(F\) 上のベクトル空間であるとは, 以下の 8 つの公理を満たす場合。
+
+<div class="styleBullet">
+<ul><li>
+・<strong>加法に関する公理</strong>
+
+　<ul>
+　<li><strong>1. 結合律</strong>: \(u+(v+w)=(u+v)+w\)</li>
+　<li><strong>2. 交換律</strong>: \(u+v=v+u\)　</li>
+　<li><strong>3. 零ベクトルの存在</strong>: ある \(0 \in V\) が存在し, \(v+0=v\)</li>
+　<li><strong>4. 逆元の存在</strong>: 各 \(v \in V\) に対して, ある \(-v \in V\) が存在し, \(v+(-v)=0\) </li>
+　</ul>
+
+</li><li>
+・<strong>スカラー倍に関する公理　(スカラー \(a,b \in F\))</strong>
+
+　<ul>
+　<li><strong>5. 分配律(ベクトルに対して)</strong>: \(a(v+w)=av+aw\) </li>
+　<li><strong>6. 分配律(スカラーに対して)</strong>: \((a+b)v=av+bv\) </li>
+　<li><strong>7. 結合律</strong>: \(a(bv)=(ab)v\) </li>
+　<li><strong>8. 単位元の存在</strong>: \(1v=v\) (ここで 1 は体 \(F\) の乗法単位元)</li>
+
+　</li></ul>
+
+</li></ul></div>
+</p>
+
+<br>
+<h3>●マグマ(magma)</h3>
+<center><img src="images/magma.svg"></center>
+<p>
+マグマとは, 以下の構造を持つ集合のこと。<br>
+・集合 \(M\)<br>
+・その集合上で定義された二項演算 \(μ\) の組 \((M, μ)\)<br>
+<br>
+任意の \(a,b\in M\) に対して, 演算 \(μ(a,b)\) の結果も再び\(M\)に属する (<strong>閉性</strong>) ことが条件。<br>
+それ以外(結合律や単位元の存在など)の <strong>追加の公理が一切課されない</strong>。<br>
+
+\[
+\begin{array}{c|c|c|c|c}
+構造名 & 閉性 & 結合性 & 単位元 & 逆元 \\
+\hline
+マグマ & 〇 & ×  & × & × \\
+\hline
+半群 & 〇 & 〇 & × & × \\
+\hline
+モノイド & 〇 & 〇 & 〇 & × \\
+\hline
+群 & 〇 & 〇 & 〇 & 〇  
+\end{array}
+\]
+</p>
+<br>
+<h3>●環(ring)</h3>
+<center><img src="images/ring.svg"></center>
+<p>
+<strong>加法</strong> と <strong>乗法</strong> という 2 つの演算が定義された集合 \((R,+,・)\)。
+
+<div class="styleBullet">
+<ul>
+<li>・加法に関する性質(アーベル群)<br>
+<br>
+<ul>
+
+<li><strong>1. 結合則</strong>: \((a+b)+c=a+(b+c)\)</li>
+<br>
+<li><strong>2. 単位元の存在</strong>: ある元 \(0\in R\) が存在し, \(a+0=a\)</li>
+<br>
+<li><strong>3. 逆元の存在</strong>: 各 \(a\in R\) に対して, \(a+(-a)=0\)</li>
+<br>
+<li><strong>4. 可換性</strong>: \(a+b=b+a\)</li>
+
+</ul>
+</li>
+<br>
+<li>・乗法に関する性質(モノイド)<br>
+<br>
+<ul>
+<li><strong>5. 結合則</strong>: \((a・b)・c=a・(b・c)\)</li>
+<br>
+<li><strong>6. 単位元の存在</strong>: ある元 \(1\in R\) が存在し, \(a・1=a\) <br>
+※ 単位元が存在する場合「単位的環」と呼ばれる。
+</li>
+
+</ul>
+</li>
+<br>
+<li>・分配則(加法と乗法の関係)<br>
+<br>
+<ul>
+<li><strong>7. 左分配則</strong>: \(a・(b・c)=a・b+a・c\)</li>
+<br>
+<li><strong>8. 右分配則</strong>: \((a+b)・c=a・c+b・c\)</li>
+<br>
+
+
+</ul></div>
+</p>
+    </body>
+</html>
