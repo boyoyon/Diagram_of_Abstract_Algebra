@@ -23,7 +23,8 @@
 ・緑矢印：Aがある性質を満たす場合, Bと呼ぶという定義(Definition)。<br>
 　　　　　Aにはその性質を満たすものも, 満たさないものも含まれるので A⊇Bの関係になる。<br>
 <br>
-まずは定義の <a href="https://boyoyon.github.io/Diagram_of_Abstract_Algebra/blue_arrows.html">青矢印</a> から。
+まずは定義の <a href="https://boyoyon.github.io/Diagram_of_Abstract_Algebra/blue_arrows.html">青矢印</a> から。<br>
+次も定義の <a href="https://boyoyon.github.io/Diagram_of_Abstract_Algebra/green_arrows.html">緑矢印</a><br>
 </p>
     </body>
 </html>
