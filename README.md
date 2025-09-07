@@ -15,7 +15,7 @@
 </p>
 <center><img src="images/diagram.svg"></center>
 
-<h3>[2]この後, どうしたものか･･･<h3>
+<h3>[2]この後, どうしたものか･･･</h3>
 <p>
 ・赤矢印：A⇒Bとなる, という定理(Theorem)<br>
 ・青矢印：Aがある構造を持つ場合, Bと呼ぶという定義(Definitio)<br>
