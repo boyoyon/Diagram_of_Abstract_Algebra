@@ -25,6 +25,7 @@
 <br>
 まずは定義の <a href="https://boyoyon.github.io/Diagram_of_Abstract_Algebra/blue_arrows.html">青矢印</a> から。<br>
 次も定義の <a href="https://boyoyon.github.io/Diagram_of_Abstract_Algebra/green_arrows.html">緑矢印</a><br>
+最後は定理の <a href="https://boyoyon.github.io/Diagram_of_Abstract_Algebra/red_arrows.html">赤矢印</a><br>
 </p>
     </body>
 </html>
