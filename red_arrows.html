@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+        <meta charset="utf-8" />
+        <title>red arrows</title>
+        <style type="text/css">
+            p
+            {
+                padding-left: 2em;
+            }
+            .margin-large
+            {
+                margin-left: 30px;
+            }
+            .margin-large-blue
+            {
+                margin-left: 30px;
+                color: blue;
+            }
+           .margin-abstract {
+               margin-left: 60px; /* 左マージンを広くする */
+               margin-right: 60px; /* 右マージンを広くする */
+           }
+        </style>
+    <style>
+        .two-columns {
+            display: flex;
+            flex-direction: row;
+            gap: 20px; /* 列間のスペース */
+        }
+        .column {
+            flex: 1; /* 各列が均等に幅を取る */
+        }
+    </style>
+<style>
+.three-columns {
+  display: flex;
+  gap: 10px; /* 列間の余白を設定 */
+}
+.column {
+  flex: 1; /* 各列の幅を均等にする */
+  padding: 10px; /* 内側の余白を設定 */
+}
+</style>
+    <style>
+        .styleRef { 
+            text-indent: -40px; /* 最初の行の字下げを逆方向に */
+            margin-left: 10px; /* 2行目以降の字下げを調整 */
+            ul {
+                  list-style-type: none; /* 箇条書き記号を非表示 */
+                  padding-left: 40px; /* 全体の左余白 */
+            }
+            li {
+            }
+        }
+    </style>
+    <style>
+        .styleBullet { 
+            text-indent: -20px; /* 最初の行の字下げを逆方向に */
+            margin-left: 30px; /* 2行目以降の字下げを調整 */
+            ul {
+                  list-style-type: none; /* 箇条書き記号を非表示 */
+                  padding-left: 0px; /* 全体の左余白 */
+            }
+            li {
+            }
+        }
+    </style>
+    <style>
+            ol
+            {
+                margin-left: 30px;
+            }
+            ul
+            {
+                margin-left: 30px;
+            }
+    </style>
+    <style>
+        .thin-line {
+            margin: 0; 
+            margin-left:2em;
+            border: 0;
+            height: 1px;
+            background-color: gray;
+        }
+
+        .thick-line {
+            margin: 0; 
+            margin-left:2em;
+            border: 0;
+            height: 2px;
+            background-color: black;
+        }
+    </style>
+    <style>
+        .blue {
+            color: blue; /* 好きな色に変更してください */
+        }
+    </style>
+    </head>
+    <body>
+        <h1><center><span style="color:red;">赤矢印(→)</span><br></center></h1>
+<h3>●距離空間 <span style="color:red;">➡</span> 位相空間</h3>
+<center><img src="images/metric_topological.svg"></center>
+<p>
+(未着手)
+</p>
+
+<h3>●リーマン多様体 <span style="color:red;">➡</span> 距離空間</h3>
+<center><img src="images/riemann_manifold.svg"></center>
+<p>
+(未着手)
+</p>
+
+<h3>●距離空間 <span style="color:red;">➡</span> ハウスドルフ空間</h3>
+<center><img src="images/metric_hausdorff.svg"></center>
+<p>
+(未着手)
+</p>
+
+<h3>●ノルム空間 <span style="color:red;">➡</span> 距離空間</h3>
+<center><img src="images/norm_metric.svg"></center>
+<p>
+ノルムが定義されているならば, 距離を定義できることを示せばよい。<br>
+<br>
+ノルムの定義<br>
+・\(V\) を(複素)ベクトル空間とする。<br>
+・\(V\) から実数の集合 \(\mathbb{R}\) への写像 \(||・||\) が以下の 3 条件をみたすとき, <br>
+　写像 \(||・||\) をベクトル空間 \(V\) 上の ノルムと呼ぶ。<br>
+<br>
+　(n.1)　\(||x|| \geq 0 \quad (\forall x \in V)\)<br>
+　(n.2)　\(||x||=0 \Leftrightarrow x=0\)<br>
+　(n.3)　\(||λx||=|λ|||x|| \quad (\forall x \in V, \forall λ \in  \mathbb{R})\)<br>
+　(n.4)　\(||x+y||\leq ||x||+||y|| \quad (\forall x,y \in V)\)<br>
+<br>
+<br>
+距離関数の定義<br>
+・任意の集合 \(M\) のべき集合 \(M^2\) から実数の集合 \(\mathbb{R}\) への写像 \(d:M^2 → \mathbb{R}\) が<br>
+　以下の 3 条件を満たすとき, 写像 \(d\) を集合 \(M\) 上の距離関数と呼ぶ。<br>
+<br>
+　(d.1)　\(d(x,y)\geq 0 \quad (\forall x,y \in M)\)<br>
+　(d.2)　\(d(x,y)=0　\Leftrightarrow x=y\)<br>
+　(d.3)　\(d(x,y)=d(y,x)\)<br>
+　(d.4)　\(d(x,y)\leq d(x,z)+d(z,y)\quad (\forall x,y,z \in M)\)<br>
+<br>
+<br>
+\(d(x,y)=||x-y||\) とおく。<br>
+<br>
+①　(n.1) より \(d(x,y)=||x-y||\geq 0\)<br>
+　　 → (d.1)を満たす。<br>
+<br>
+②　(n.2) より \(d(x,y)=||x-y||=0 \Leftrightarrow x-y=0 \Leftrightarrow x=y\)<br>
+　　→ (d.2)を満たす。<br>
+<br>
+③　(n.3)より \(d(y,x)=||y-x||=||-(x-y)||=|-1|||x-y||=d(x,y)\)<br>
+　　→ (d.3)を満たす。<br>
+<br>
+④　(n.4) より \(d(x,y)=||x-y||=||(x-z)+(z-y)||\leq ||x-z||+||z-y||=d(x,z)+d(z,y)\)<br>
+　　→ (d.4)を満たす。
+</p>
+<br>
+
+<h3>●内積空間 <span style="color:red;">➡</span> ノルム空間<br>
+　ヒルベルト空間 <span style="color:red;">➡</span> バナッハ空間</h3>
+<center><img src="images/inner_norm.svg"></center>
+<p>
+内積が定義されているならば, ノルムを定義できることを示せばよい。<br>
+<br>
+内積の定義<br>
+・\(V\) を複素ベクトル空間とする。<br>
+・べき集合 \(V^2=V\times V\) から複素数 \(\mathbb{C}\) への写像<br>
+　\(\langle ・,・ \rangle:V^2→\mathbb{C}\) が以下の条件を満たす場合, \(\langle ・,・ \rangle\) を \(V\) 上の内積と呼ぶ。<br>
+<br>
+　(i.1)　\(\langle x+y,z\rangle =\langle x,z\rangle +\langle y,z\rangle \quad (\forall x,y,z \in V)\)<br>
+　(i.2)　\(\langle x,λz\rangle=λ\langle x,z\rangle \quad (\forall x,z \in V, \forall λ \in \mathbb{C})\)<br>
+　(i.3)　\(\langle y,x\rangle=\overline{\langle x,y\rangle} \quad (\forall x,y \in V)\)<br>
+　(i.4)　\(\langle x,x\rangle \geq 0 \quad (\forall x \in V)\) ･･･ ③より \(\langle x,x\rangle\) は実数 → 大小関係を議論できる。<br>
+　(i.5)　\(\langle x,x\rangle=0\) と \(x=0\) は同値 <br>
+<br>
+<br>
+ノルムの定義<br>
+・\(V\) を(複素)ベクトル空間とする。<br>
+・\(V\) から実数の集合 \(\mathbb{R}\) への写像 \(||・||\) が以下の 3 条件をみたすとき, <br>
+　写像 \(||・||\) をベクトル空間 \(V\) 上の ノルムと呼ぶ。<br>
+<br>
+　(n.1)　\(||x|| \geq 0 \quad (\forall x \in V)\)<br>
+　(n.2)　\(||x||=0 \Leftrightarrow x=0\)<br>
+　(n.3)　\(||λx||=|λ|||x|| \quad (\forall x \in V, \forall λ \in  \mathbb{R})\)<br>
+　(n.4)　\(||x+y||\leq ||x||+||y|| \quad (\forall x,y \in V)\)<br>
+<br>
+<br>
+\(||x||=\sqrt{\langle x,x\rangle}\) とおく。<br>
+<br>
+①　\(\sqrt{・}\) は定義より, ・が非負なら非負の実数。(i.4)より \(\langle x,x \rangle\) は非負。<br>
+　　→ \(||x||=\sqrt{\langle x,x\rangle}\geq 0\)<br>
+　　→ (n.1) を満たす。<br>
+<br>
+②　(i.5)より(n.2)を満たす。<br>
+<br>
+③　\(||λx||=\sqrt{\langle λx、λx\rangle}\)<br>
+　　(i.2)より \(\langle λx,λx \rangle=λ\langle λx, x\rangle\)<br>  
+　　(i.3)より \(λ\langle λx,x \rangle=λ\overline{\langle x,λx\rangle}\)<br>
+　　(i.2)より \(λ\overline{\langle x,λx\rangle}=λ\overline{λ\langle x,x\rangle}\)<br>
+　　ノルムの定義に出てくる \(λ\) は実数, \(\langle x,x\rangle\) も実数なので \(\overline{λ\langle x,x\rangle}=λ\langle x,x\rangle\)<br>
+　　\(\therefore \langle λx,λx\rangle=λ^2\langle x,x \rangle\)<br>
+　　\(||λx||=\sqrt{\langle λx、λx\rangle}=\sqrt{λ^2\langle x,x\rangle}=|λ|\sqrt{\langle x,x\rangle}=|λ|||x||\)<br>
+　　→ (n.3)を満たす。<br>
+<br>
+③　\(||x+y||^2=\langle x+y,x+y\rangle\)<br>
+　　(i.1) より \(\langle x+y,x+y\rangle=\langle x,x+y\rangle+\langle y,x+y\rangle\)<br>
+　　(i.3) より \(\langle x, x+y\rangle+\langle y,x+y\rangle=\overline{\langle x+y,x\rangle}+\overline{\langle x+y,y\rangle}\)<br>
+　　(i.1)より \(\overline{\langle x+y,x\rangle}+\overline{\langle x+y,y\rangle}=\overline{\langle x,x\rangle}+\overline{\langle y,x\rangle}+\overline{\langle x,y\rangle}+\overline{\langle y,y\rangle}\)<br>
+　　\(\langle x,x\rangle\), \(\langle y,y\rangle\) は実数なので, \(\overline{\langle x,x\rangle}=\langle x,x\rangle=||x||^2\),　\(\overline{\langle y,y\rangle}=\langle y,y\rangle=||y||^2\)<br>
+　　(i.3) より \(\overline{\langle y,x\rangle}=\langle x,y\rangle\)<br>
+　　\(\langle x,y\rangle+\overline{\langle x,y\rangle}=\langle x,y\rangle の実部の2倍 \leq 2 \times |\langle x,y\rangle|\)<br>
+　　コーシー・シュワルツの定理より \(|\langle x,y \rangle|\leq ||x||||y||\)<br>
+　　\(\therefore ||x+y||^2=\langle x+y,x+y\rangle \leq ||x||^2+2||x||||y||+||y||^2=(||x||+||y||)^2\)<br>
+　　0 以上の実数を二乗する前後で大小関係は変わらないので<br>
+　　\(||x+y||\leq||x||+||y||\)<br>
+　　→ (n.4)を満たす。
+</p>
+
+
+<h3>●体 <span style="color:red;">➡</span> ベクトル空間</h3>
+<center><img src="images/field_vector.svg"></center>
+<p>
+ベクトル空間は, 組 (集合, 体, スカラー倍, 加法) であり, 体はスカラーとして使われているが, 集合の部分に体を使ってもベクトル空間になる, という主張。 <br>
+→ 組 (体, 体, スカラー倍(=体の積), 加法(=体の和)) がベクトルの公理を満たすことを示せばよい。<br>
+
+<br>
+・体の公理
+\[
+\begin{array}{l|l|l}
+\hline
+No. & 体の公理 & 式 \\
+\hline
+field.1 & 和の交換律 & f_1+f_2=f_2+f_1 \\
+\hline
+field.2 & 和の結合律 & f_1+(f_2+f_3)=(f_1+f_2)+f_3 \\
+\hline
+field.3 & 和に関する単位元(0)の存在 & すべての f \in \mathbb{F} に対して f+0=f を満たす 0 が存在する \\
+\hline
+field.4 & 和に関する逆元(-f)の存在 & f+(-f)=0 となる -f が存在する \\
+\hline
+field.5 & 積の交換律 & f_1・f_2=f_2・f_1 \\
+\hline
+field.6 & 積の結合律 & f_1・(f_2・f_3)=(f_1・f_2)・f_3 \\
+\hline
+field.7 & 分配律 & f_1・(f_2+f_3)=f_1・f_2+f_1・f_3 \\
+\hline
+field.8 & 積に関する単位元(1)の存在 & f・1=f となる 1 が存在する \\
+\hline
+field.9 & 積に関する逆元(f^{-1})の存在 & f・f^{-1}=1 となる f^{-1} が存在する \\
+\hline
+field.10 & 0 以外の元の存在 & 1 \neq 0
+\end{array}
+\]
+
+・ベクトルの公理
+\[
+\begin{array}{l|l|l}
+\hline
+No. & ベクトルの公理 & 対応する体の公理 \\
+\hline
+vector.1 & (加法)結合律 & field.2 \\
+\hline
+vector.2 & (加法)交換律 & field.1 \\
+\hline
+vector.3 & (加法)零ベクトルの存在 & field.3 \\
+\hline
+vector.4 & (加法)逆元の存在 & field.4 \\
+\hline
+vector.5 & (スカラー倍)ベクトルに対する分配律 & field.7 \\
+\hline
+vector.6 & (スカラー倍)スカラーに対する分配律 & field.7 \\
+\hline
+vector.7 & (スカラー倍)結合律 & field.6 \\
+\hline
+vector.8 & (スカラー倍)単位元の存在 & field.8
+
+\end{array}
+\]
+
+体の公理が満たされるならばベクトルの公理も満たされている。
+</p>
+<br>
+    </body>
+</html>

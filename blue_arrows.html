@@ -107,7 +107,8 @@
 <center><img src="images/space.svg"></center>
 <p>
 <strong>集合</strong> に何らかの数学的構造を加味したものを <strong>空間</strong> という。<br>
-空間の要素を <strong>点</strong> という。
+空間を組 (集合, 構造(,構造2,･･･)) と表す。<br>
+また, 空間の要素を <strong>点</strong> という。
 </p>
 <br>
 <h3>●測度空間(measure space)</h3>
@@ -158,18 +159,17 @@ F & X上のσ-加法族(σ-代数)※ \\
 <div class="styleBullet">
 <ul><li>
 <strong>1. 空集合と全体集合が含まれる</strong><br>
-<br>
-　\(\varnothing \in O,\quad X \in O\)
+\(\varnothing \in O, \quad X \in O\)
 
 </li><br><li>
 <strong>2. 有限個の交差に対して閉じている</strong><br>
-<br>
-　\(O_1,O_2.\cdots,O_n \in O \Rightarrow \bigcap_{k=1}^n O_k \in O\)
+\(O_1,O_2,\cdots,O_n \in O \quad \Longrightarrow \quad \bigcap_{k=1}^n O_k \in O\)
 
 </li><br><li>
-<strong>3. 任意個の和集合に対して閉じている</strong><br>
-<br>
-　\(\{O_λ\}_{λ\in A}\subset O \Rightarrow \bigcup_{λ\in A}O_λ\in O\)
+<strong>3. 任意の和集合に対して閉じている</strong><br>
+\(\{O_λ\}_{λ\in A}\subset O \quad \Longrightarrow \quad \bigcup_{λ\in A}O_λ \in O
+\)
+
 </li></ul></div>
 </p>
 <br>
@@ -182,7 +182,7 @@ F & X上のσ-加法族(σ-代数)※ \\
 d:X \times X \rightarrow [0,\infty)
 \]
 
-が以下の条件をすべて満たすとき, 組 \((X,d)\) を<strong>距離空間</strong> と呼ぶ。<br>
+が以下の条件をすべて満たすとき, 関数 \(d\) を<strong>距離関数</strong> とよび, 組 \((X,d)\) を<strong>距離空間</strong> と呼ぶ。<br>
 
 <div class="styleBullet">
 <ul><li>
@@ -192,7 +192,7 @@ d:X \times X \rightarrow [0,\infty)
 　\(d(x,y) \geq 0\)
 
 </li><br><li>
-<strong>2. 自己同一性(Identity of indiscernibles)</strong><br>
+<strong>2. 同一性の原理(Identity of indiscernibles)</strong><br>
 　距離が 0 であるのは 2 点が同一のときのみ。<br>
 <br>
 　\(d(x,y)=0 \Leftrightarrow x=y\)
@@ -279,7 +279,7 @@ d:X \times X \rightarrow [0,\infty)
 <br>
 <ul>
 
-<li><strong>1. 結合則</strong>: \((a+b)+c=a+(b+c)\)</li>
+<li><strong>1. 結合律</strong>: \((a+b)+c=a+(b+c)\)</li>
 <br>
 <li><strong>2. 単位元の存在</strong>: ある元 \(0\in R\) が存在し, \(a+0=a\)</li>
 <br>
@@ -293,7 +293,7 @@ d:X \times X \rightarrow [0,\infty)
 <li>・乗法に関する性質(モノイド)<br>
 <br>
 <ul>
-<li><strong>5. 結合則</strong>: \((a・b)・c=a・(b・c)\)</li>
+<li><strong>5. 結合律</strong>: \((a・b)・c=a・(b・c)\)</li>
 <br>
 <li><strong>6. 単位元の存在</strong>: ある元 \(1\in R\) が存在し, \(a・1=a\) <br>
 ※ 単位元が存在する場合「単位的環」と呼ばれる。
@@ -302,12 +302,12 @@ d:X \times X \rightarrow [0,\infty)
 </ul>
 </li>
 <br>
-<li>・分配則(加法と乗法の関係)<br>
+<li>・分配律(加法と乗法の関係)<br>
 <br>
 <ul>
-<li><strong>7. 左分配則</strong>: \(a・(b+c)=a・b+a・c\)</li>
+<li><strong>7. 左分配律</strong>: \(a・(b+c)=a・b+a・c\)</li>
 <br>
-<li><strong>8. 右分配則</strong>: \((a+b)・c=a・c+b・c\)</li>
+<li><strong>8. 右分配律</strong>: \((a+b)・c=a・c+b・c\)</li>
 <br>
 
 
