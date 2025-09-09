@@ -107,6 +107,62 @@
 <center><img src="images/metric_topological.svg"></center>
 <p>
 難しそうなので外部参照とさせてもらいたいが見当たらず･･･<br>
+Copilotに紹介されたページ<br>
+<a href="https://old.math.jp/wiki/位相空間論13：距離空間の位相%281%29">https://old.math.jp/wiki/位相空間論13：距離空間の位相%281%29</a><br>
+<a href="https://www.sciencetime.jp/note/134">https://www.sciencetime.jp/note/134</a><br>
+<a href="https://www.math.sci.hiroshima-u.ac.jp/tamaru/files/12tsuron2.pdf">
+https://www.math.sci.hiroshima-u.ac.jp/tamaru/files/12tsuron2.pdf</a><br>
+<br>
+<strong>距離空間</strong><br>
+・空間内の任意の 2 点 \(x,y\) に対して, 以下の条件を満たす距離関数を持つこと, だった。<br>
+　(d.1)　\(d(x,y)\geq 0 \quad (\forall x,y \in M)\)<br>
+　(d.2)　\(d(x,y)=0　\Leftrightarrow x=y\)<br>
+　(d.3)　\(d(x,y)=d(y,x)\)<br>
+　(d.4)　\(d(x,y)\leq d(x,z)+d(z,y)\quad (\forall x,y,z \in M)\)<br>
+<br>
+<strong>位相空間</strong><br>
+・以下の条件を満たす位相 \(O\) を持つ空間, だった。<br>
+　(t.1) 空集合と全体集合が含まれる。<br>
+　(t.2) 有限個の交差に対して閉じている。<br>
+　(t.3) 任意個の和集合に対して閉じている。<br>
+<br>
+Copilotに教えてもらった(幻覚が含まれているかも知れない･･･)<br>
+<br>
+<strong>開球体の定義</strong><br>
+　距離空間 (\(X,d)\) において, 点 \(x \in X\), 半径 \(r\gt 0\) に対して<br>
+　\(B(x,r)=\{y \in X \mid d(x,y)\lt r\}\)<br>
+　を『開球体(Open Ball)』と呼ぶ。<br>
+<br>
+　(蛇足)<br>
+　　表面を含まない球の内部の点の集合 ⇒ 『皮をむいたブドウ』<br>
+　(蛇足おわり)<br>
+<br>
+<strong>開集合の定義</strong><br>
+　任意の点 \(x\in U\) に対して, ある半径 \(r\gt 0\) が存在し<br>
+　\(B(x,r)\subset U\)
+　となるような集合 \(U\subset X\) を開集合という。<br>
+<br>
+　(蛇足)<br>
+　　境界を含まないイメージ。<br>
+　　境界上の点は　\(r\) をどう選らんでも, 開球内に \(U\) の点と, \(U\) ではない点が交じり合ってしまう。<br>
+</p>
+<center><img src="images/boundary.svg"></center>
+<p>
+　(蛇足おわり)<br>
+<br>
+<strong>開集合全体の族</strong><br>
+　開集合全体の族を\(O\)とすると, 位相の条件を満足する, (らしい･･･)<br>
+　(蛇足)<br>
+　　(t.1) 空集合, 全体集合が開集合になるのはどこから出てくる?<br>
+　　(t.2)(t.3) 皮をむいたブドウの積集合, 和集合を考えても皮は出てこないので何となくそんな気がする。<br>
+　　無限個だと成り立たないらしい。<br>
+　　例：開区間 \(U_n=\left(-\frac{1}{n},\frac{1}{n}\right)\)の無限個の積集合は
+\[
+\bigcap_{n=1}^\infty U_n=\{0\}
+\]
+
+　　これは一点集合であり, 開集合ではない。<br>
+　(蛇足おわり)<br>
 </p>
 
 <h3>●リーマン多様体 <span style="color:red;">➡</span> 距離空間</h3>
@@ -116,18 +172,49 @@
 <a href="https://ja.wikipedia.org/wiki/リーマン多様体">https://ja.wikipedia.org/wiki/リーマン多様体</a><br>
 距離空間としてのリーマン多様体
 </p>
-
+<p>
+<strong>リーマン多様体</strong><br>
+　以下の構造を持つ空間<br>
+　・<strong>可微分多様体</strong><br>
+　・各点に<strong>内積</strong>(<strong>軽量テンソル</strong>)が定義されている。<br>
+</p>
+<p>
+(蛇足)<br>
+　・内積により、曲線の長さ、角度、面積、体積などの幾何的な量を測ることができる<br>
+　・2 点間の曲線の長さの下限を距離と定義すると距離空間になる, ということらしい･･･<br>
+(蛇足おわり)<br>
+</p>
 <h3>●距離空間 <span style="color:red;">➡</span> ハウスドルフ空間</h3>
 <center><img src="images/metric_hausdorff.svg"></center>
 <p>
 難しそうなので外部参照とさせてもらった(^^;)<br>
-<a href="https://takataninote.com/topology/metric-hausdorff.html">https://takataninote.com/topology/metric-hausdorff.html</a><br>
+<a href="https://takataninote.com/topology/metric-hausdorff.html">https://takataninote.com/topology/metric-hausdorff.html</a>
+</p>
+<p>
+<strong>ハウスドルフ空間</strong><br>
+・空間内の任意の異なる 2 点 \(x,y\) が交わらない開集合をもつこと, だった。<br>
 <br>
-イメージとしては, \(x \neq y ⇒ r=d(x,y)\gt 0\)<br>
-\(x,y\)を中心とする半径 \(r/3\) の開球(近傍)を考えるとそれらは<br>
-交わらない開集合になるのでハウスドルフ空間になる。
+<strong>距離空間</strong><br>
+・空間内の任意の 2 点 \(x,y\) に対して, 以下の条件を満たす距離関数を持つこと, だった。<br>
+　(d.1)　\(d(x,y)\geq 0 \quad (\forall x,y \in M)\)<br>
+　(d.2)　\(d(x,y)=0　\Leftrightarrow x=y\)<br>
+　(d.3)　\(d(x,y)=d(y,x)\)<br>
+　(d.4)　\(d(x,y)\leq d(x,z)+d(z,y)\quad (\forall x,y,z \in M)\)<br>
+<br>
 </p>
 <center><img src="images/metric_hausdorff2.svg"></center>
+<p>
+(d.1), (d.2) より \(x \neq y ⇒ r=d(x,y)\gt 0\)<br>
+\(x,y\) を中心とする半径 \(ε=r/3\) の開球(近傍)を考える。<br>
+\(x\) の \(ε\) 近傍 \(N(x,ε)\) と \(y\) の \(ε\) 近傍 \(N(y,ε)\) が交わりを持つと仮定し,<br>
+交わりの中の点 \(z\) を考えると, (d.4) より<br>
+
+\(\displaystyle r=d(x,y)\leq d(x,z)+d(z,y) = \frac{r}{3}+\frac{r}{3}=\frac{2}{3}r\)　つまり　\(\displaystyle r \leq \frac{2}{3}r\)<br>
+となり矛盾する。したがって, 仮定が誤りで,<br>
+\(x\) の \(ε\) 近傍 \(N(x,ε)\) と \(y\) の \(ε\) 近傍 \(N(y,ε)\)は交わりを持たない。<br>
+∴ ハウスドルフ空間である。
+
+
 
 <h3>●ノルム空間 <span style="color:red;">➡</span> 距離空間</h3>
 <center><img src="images/norm_metric.svg"></center>
@@ -235,7 +322,10 @@
 <h3>●体 <span style="color:red;">➡</span> ベクトル空間</h3>
 <center><img src="images/field_vector.svg"></center>
 <p>
-ベクトル空間は, 組 (集合, 体, スカラー倍, 加法) であり, 体はスカラーとして使われているが, 集合の部分に体を使ってもベクトル空間になる, という主張。 <br>
+ベクトル空間は, 組 (集合, 体, スカラー倍, 加法) であり, 体はスカラーとして使われているが, 集合の部分に体を使ってもベクトル空間になる, という主張。 
+</p>
+<center><img src="images/field_vector2.svg"></center>
+<p>
 → 組 (体, 体, スカラー倍(=体の積), 加法(=体の和)) がベクトルの公理を満たすことを示せばよい。<br>
 
 <br>
@@ -243,27 +333,27 @@
 \[
 \begin{array}{l|l|l}
 \hline
-No. & 体の公理 & 式 \\
+index & 体の公理 & 式 \\
 \hline
-field.1 & 和の交換律 & f_1+f_2=f_2+f_1 \\
+\text{(f.1)} & 和の交換律 & f_1+f_2=f_2+f_1 \\
 \hline
-field.2 & 和の結合律 & f_1+(f_2+f_3)=(f_1+f_2)+f_3 \\
+\text{(f.2)} & 和の結合律 & f_1+(f_2+f_3)=(f_1+f_2)+f_3 \\
 \hline
-field.3 & 和に関する単位元(0)の存在 & すべての f \in \mathbb{F} に対して f+0=f を満たす 0 が存在する \\
+\text{(f.3)} & 和に関する単位元(0)の存在 & すべての f \in \mathbb{F} に対して f+0=f を満たす 0 が存在する \\
 \hline
-field.4 & 和に関する逆元(-f)の存在 & f+(-f)=0 となる -f が存在する \\
+\text{(f.4)} & 和に関する逆元(-f)の存在 & f+(-f)=0 となる -f が存在する \\
 \hline
-field.5 & 積の交換律 & f_1・f_2=f_2・f_1 \\
+\text{(f.5)} & 積の交換律 & f_1・f_2=f_2・f_1 \\
 \hline
-field.6 & 積の結合律 & f_1・(f_2・f_3)=(f_1・f_2)・f_3 \\
+\text{(f.6)} & 積の結合律 & f_1・(f_2・f_3)=(f_1・f_2)・f_3 \\
 \hline
-field.7 & 分配律 & f_1・(f_2+f_3)=f_1・f_2+f_1・f_3 \\
+\text{(f.7)} & 分配律 & f_1・(f_2+f_3)=f_1・f_2+f_1・f_3 \\
 \hline
-field.8 & 積に関する単位元(1)の存在 & f・1=f となる 1 が存在する \\
+\text{(f.8)} & 積に関する単位元(1)の存在 & f・1=f となる 1 が存在する \\
 \hline
-field.9 & 積に関する逆元(f^{-1})の存在 & f・f^{-1}=1 となる f^{-1} が存在する \\
+\text{(f.9)} & 積に関する逆元(f^{-1})の存在 & f・f^{-1}=1 となる f^{-1} が存在する \\
 \hline
-field.10 & 0 以外の元の存在 & 1 \neq 0
+\text{(f.10)} & 0 以外の元の存在 & 1 \neq 0
 \end{array}
 \]
 
@@ -273,21 +363,21 @@ field.10 & 0 以外の元の存在 & 1 \neq 0
 \hline
 No. & ベクトルの公理 & 対応する体の公理 \\
 \hline
-vector.1 & (加法)結合律 & field.2 \\
+\text{(v.1)} & (加法)結合律 & \text{(f.2)} \\
 \hline
-vector.2 & (加法)交換律 & field.1 \\
+\text{(v.2)} & (加法)交換律 & \text{(f.1)} \\
 \hline
-vector.3 & (加法)零ベクトルの存在 & field.3 \\
+\text{(v.3)} & (加法)零ベクトルの存在 & \text{(f.3)} \\
 \hline
-vector.4 & (加法)逆元の存在 & field.4 \\
+\text{(v.4)} & (加法)逆元の存在 & \text{(f.4)} \\
 \hline
-vector.5 & (スカラー倍)ベクトルに対する分配律 & field.7 \\
+\text{(v.5)} & (スカラー倍)ベクトルに対する分配律 & \text{(f.7)} \\
 \hline
-vector.6 & (スカラー倍)スカラーに対する分配律 & field.7 \\
+\text{(v.6)} & (スカラー倍)スカラーに対する分配律 & \text{(f.7)} \\
 \hline
-vector.7 & (スカラー倍)結合律 & field.6 \\
+\text{(v.7)} & (スカラー倍)結合律 & \text{(f.6)} \\
 \hline
-vector.8 & (スカラー倍)単位元の存在 & field.8
+\text{(v.8)} & (スカラー倍)単位元の存在 & \text{(f.8)}
 
 \end{array}
 \]
