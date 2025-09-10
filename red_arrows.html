@@ -174,24 +174,62 @@ ChatGPTに教えてもらった<br>
 　　よって合併も開集合である。
 </p>
 
-<h3>●リーマン多様体 <span style="color:red;">➡</span> 距離空間 [未完]</h3> 
+<h3>●リーマン多様体 <span style="color:red;">➡</span> 距離空間</h3> 
 <center><img src="images/riemann_manifold.svg"></center>
-<p>
-難しそうなので外部参照とさせてもらった(^^;)<br>
-<a href="https://ja.wikipedia.org/wiki/リーマン多様体">https://ja.wikipedia.org/wiki/リーマン多様体</a><br>
-距離空間としてのリーマン多様体
-</p>
+
 <p>
 <strong>リーマン多様体</strong><br>
 　以下の構造を持つ空間<br>
 　・<strong>可微分多様体</strong><br>
 　・各点に<strong>内積</strong>(<strong>軽量テンソル</strong>)が定義されている。<br>
+<br>
+<strong>距離空間</strong><br>
+・空間内の任意の 2 点 \(x,y\) に対して, 以下の条件を満たす距離関数を持つこと, だった。<br>
+　(d.1)　\(d(x,y)\geq 0 \quad (\forall x,y \in M)\)<br>
+　(d.2)　\(d(x,y)=0　\Leftrightarrow x=y\)<br>
+　(d.3)　\(d(x,y)=d(y,x)\)<br>
+　(d.4)　\(d(x,y)\leq d(x,z)+d(z,y)\quad (\forall x,y,z \in M)\)<br>
+<br>
 </p>
 <p>
-(蛇足)<br>
-　・内積により、曲線の長さ、角度、面積、体積などの幾何的な量を測ることができる<br>
-　・2 点間の曲線の長さの下限を距離と定義すると距離空間になる, ということらしい･･･<br>
-(蛇足おわり)<br>
+これも ChatGPT に教えてもらった。<br>
+<br>
+<strong>Step 1. 距離関数の定義と存在性</strong><br>
+<br>
+　リーマン距離の定義:<br>
+　　\(\displaystyle d(p,q) \equiv \inf\limits_γ \int_0^1 ||\dot{γ}(t)||_g dt = \inf\limits_γ L(γ)\)<br>
+　　・ここで \(γ\) は \(p\) から \(q\) を結ぶ滑らかな曲線(または区分的に滑らかな曲線)<br>
+　　・\(||\dot{γ}||_g=\sqrt{g_{γ(t)}(\dot{γ}(t),\dot{γ}(t))}\) はリーマン計量による測度ベクトルのノルム<br>
+<br>
+<strong>Step 2. 距離関数の公理(d.1)～(d.4)の検証</strong><br>
+<br>
+　(<strong>非負性</strong>) \(d(p,q)\geq 0\)<br>
+　・長さ \(L(γ)\geq 0\) なので, その \(\inf\) も非負。<br>
+<br>
+
+　(<strong>分離公理</strong>) \(d(p,q)=0 \Longleftrightarrow p=q\)<br>
+　・\(p=q\) ならば, 定数曲線で長さゼロなので \(d(p,q)=0\) <br>
+　・\(p\neq q\) であれば<br>
+　　1. \(p\) の座標近傍 \(U\) を取って, \(\varphi:U→\mathbb{R}^n\) とする。<br>
+　　2. \(\varphi(U)\) 上では, リーマン計量はユークリッド軽量と連続的に同値:<br>
+　　　\(C^{-1}||v||_{eucl}\leq ||v||_g \leq C||v||_{eucl}\)<br>
+　　　という \(C\)　が存在する。<br>
+　　3. ユークリッド距離で \(p\neq q\) なら \(||p-q||\gt 0\)<br>
+　　4. したがって, その点を結ぶ任意の曲線の長さは正の下限を持ち, \(d(p,q)\gt 0\)<br>
+<br>
+　(<strong>対称性</strong>) \(d(p,q)=d(q,p)\)<br>
+　・曲線 \(γ(t)\) の逆向き曲線 \(γ^-(t)=γ(1-t)\) も同じ長さを持つ。<br>
+　・よって, \(d(p,q)=\inf_{γ:p→q}L(γ)=\inf_{γ:q→p}L(\tilde{γ})=d(q,p)\)<br>
+<br>
+　(<strong>三角不等式</strong>) \(d(p,r)\leq d(p,q)+d(q,r)\)<br>
+　・任意の \(ε\gt0 \) に対して \(p→q\) を結ぶ \(γ_1\), \(q→r\) を結ぶ \(γ_2\) を取り<br>
+　　以下を満たすようにできる。<br>
+　　\(\displaystyle L(γ_1)\lt d(p,q)+\frac{ε}{2},\quad L(γ_2)\lt d(q,r)+\frac{ε}{2}\)<br>
+　・連結曲線 \(γ=γ_1*γ_2\) に対して<br>
+　　\(d(p,r)\leq L(γ)=L(γ_1)+L(γ_2)\lt d(p,q)+d(q,r)+ε\)<br>
+　・\(ε\gt 0\) は任意なので, 極限で<br>
+　　\(d(p,r)\leq d(p,q)+d(q,r)\)
+
 </p>
 <h3>●距離空間 <span style="color:red;">➡</span> ハウスドルフ空間</h3>
 <center><img src="images/metric_hausdorff.svg"></center>
