@@ -106,13 +106,7 @@
 <h3>●距離空間 <span style="color:red;">➡</span> 位相空間</h3>
 <center><img src="images/metric_topological.svg"></center>
 <p>
-難しそうなので外部参照とさせてもらいたいが見当たらず･･･<br>
-Copilotに紹介されたページ<br>
-<a href="https://old.math.jp/wiki/位相空間論13：距離空間の位相%281%29">https://old.math.jp/wiki/位相空間論13：距離空間の位相%281%29</a><br>
-<a href="https://www.sciencetime.jp/note/134">https://www.sciencetime.jp/note/134</a><br>
-<a href="https://www.math.sci.hiroshima-u.ac.jp/tamaru/files/12tsuron2.pdf">
-https://www.math.sci.hiroshima-u.ac.jp/tamaru/files/12tsuron2.pdf</a><br>
-<br>
+
 <strong>距離空間</strong><br>
 ・空間内の任意の 2 点 \(x,y\) に対して, 以下の条件を満たす距離関数を持つこと, だった。<br>
 　(d.1)　\(d(x,y)\geq 0 \quad (\forall x,y \in M)\)<br>
@@ -126,46 +120,61 @@ https://www.math.sci.hiroshima-u.ac.jp/tamaru/files/12tsuron2.pdf</a><br>
 　(t.2) 有限個の交差に対して閉じている。<br>
 　(t.3) 任意個の和集合に対して閉じている。<br>
 <br>
-Copilotに教えてもらった(幻覚が含まれているかも知れない･･･)<br>
+ChatGPTに教えてもらった<br>
 <br>
-<strong>開球体の定義</strong><br>
+<strong>Step 1. 開球を定義する</strong><br>
 　距離空間 (\(X,d)\) において, 点 \(x \in X\), 半径 \(r\gt 0\) に対して<br>
-　\(B(x,r)=\{y \in X \mid d(x,y)\lt r\}\)<br>
-　を『開球体(Open Ball)』と呼ぶ。<br>
+　\(B(x,r)\equiv \{y \in X \mid d(x,y)\lt r\}\quad r\gt 0\)<br>
+　を開球(Open Ball)と呼ぶ。<br>
+<br>
+<strong>Step 2. 開球を使って「開集合」を定義する</strong><br>
+　距離空間 \((X,d)\) において, \(X\) のある部分集合 \(U\subset X\) が以下を満たす場合,<br>
+　「開集合」であると定義する。<br> 
+<br>
+　・任意の \(x\in U\) に対して, ある \(ε\gt 0\) が存在して, \(B(x,ε)\subset U\) となるとき,<br>
+　　\(U\) を開集合とする。<br>
 <br>
 　(蛇足)<br>
-　　表面を含まない球の内部の点の集合 ⇒ 『皮をむいたブドウ』<br>
-　(蛇足おわり)<br>
-<br>
-<strong>開集合の定義</strong><br>
-　任意の点 \(x\in U\) に対して, ある半径 \(r\gt 0\) が存在し<br>
-　\(B(x,r)\subset U\)
-　となるような集合 \(U\subset X\) を開集合という。<br>
-<br>
-　(蛇足)<br>
-　　境界を含まないイメージ。<br>
-　　境界上の点は　\(r\) をどう選らんでも, 開球内に \(U\) の点と, \(U\) ではない点が交じり合ってしまう。<br>
+　　開集合とは境界を含まないイメージ。<br>
+　　境界上の点は　\(ε\) をどう選らんでも, 開球内に \(U\) の点と, \(U\) ではない点が交じり合ってしまう。<br>
+　　※ 全体集合 \(X\) の場合, このイメージは成り立たない(後述)。
 </p>
 <center><img src="images/boundary.svg"></center>
 <p>
 　(蛇足おわり)<br>
 <br>
-<strong>開集合全体の族</strong><br>
-　開集合全体の族を\(O\)とすると, 位相の条件を満足する, (らしい･･･)<br>
-　(蛇足)<br>
-　　(t.1) 空集合, 全体集合が開集合になるのはどこから出てくる?<br>
-　　(t.2)(t.3) 皮をむいたブドウの積集合, 和集合を考えても皮は出てこないので何となくそんな気がする。<br>
-　　無限個だと成り立たないらしい。<br>
-　　例：開区間 \(U_n=\left(-\frac{1}{n},\frac{1}{n}\right)\)の無限個の積集合は
-\[
-\bigcap_{n=1}^\infty U_n=\{0\}
-\]
-
-　　これは一点集合であり, 開集合ではない。<br>
-　(蛇足おわり)<br>
+<strong>Step 3. 開集合の族を位相として(t.1)～(t.3)を満たすことを確認する</strong><br>
+　・開集合の定義によって定まる集合族 \(\mathcal{T}_d\) を位相とする。<br>
+<br>
+　(t.1)<br>
+　・\(\varnothing\) は開集合。\(B(x,ε)\subset \varnothing\)<br>
+　　∵ \(x\) が存在しない(前提が偽な)ので, 命題が成立するということらしい(by ChatGPT)<br>
+　　　因みに vacuous truth（空虚な真）というそうである。<br>
+<br>
+　・全体集合 \(X\) は開集合。\(B(x,ε)\subset X\)<br>
+　　　部分集合 \(U\) の場合, 境界があると上の図のように開球が \(U\) に含まれないが<br>
+　　　全体集合 \(X\) の場合は、そうならない。<br>
+<br>
+　　　仮に, 全体集合 \(X\) に境界があったとして, 境界の点 \(x\) を中心とした球が \(X\)<br>
+　　　からはみ出したとしても, 定義により, 開球に含まれる \(y\) は \(X\) の点だけ。<br>
+<br>
+　　　\(B(x,r)\equiv \{{\color{red}y \in X} \mid d(x,y)\lt r\}\quad r\gt 0\)<br>
+<br>
+　(t.2)<br>
+　　2つの開集合 \(U,V\) の共通部分 \(U\cap V\) を考える。<br>
+　　・\(x\in U\) なの ある \(ε_1\gt 0\) で \(B(x,ε_1)\subset U\) <br>
+　　・\(x\in V\) なの ある \(ε_2\gt 0\) で \(B(x,ε_2)\subset V\) <br>
+　　・よって \(ε=min(ε_1, ε_2)\) とすれば, \(B(x,ε)\subset U\cap V\)<br>
+　　これを繰り返せば, 有限個の交差に対して閉じていることがわかる。<br>
+<br>
+　(t.3)<br>
+　　開集合 \(U_i\) の族があったとして, \(\bigcup_i U_i\) の任意の点 \(x\) をとると<br>
+　　\(x\in U_{i_0}\) となる \(i_0\) が存在する。<br>
+　　\(U_{i_0}\) は開集合なので, ある \(ε\gt 0\) に対して \(B(x,ε)\subset U_{i_0}\subset \bigcup_i U_i\)<br>
+　　よって合併も開集合である。
 </p>
 
-<h3>●リーマン多様体 <span style="color:red;">➡</span> 距離空間</h3>
+<h3>●リーマン多様体 <span style="color:red;">➡</span> 距離空間 [未完]</h3> 
 <center><img src="images/riemann_manifold.svg"></center>
 <p>
 難しそうなので外部参照とさせてもらった(^^;)<br>
